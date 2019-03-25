@@ -102,3 +102,22 @@ function a(month, leapyear){
 }
 return result;
 }
+
+function rockPaperScissors(num){
+    const randomNo = Math.floor(Math.random() * 3) + 1;
+    if(num > 3|| num < 0){
+        throw new error('error');
+    }else{
+        if(num === randomNo){
+            return 'tie';
+        }else if(num === 1 && randomNo === 2){
+            return 'losser';
+        }else if(num === 2 && randomNo === 3){
+            return 'losser';
+        }else if(num === 3 && randomNo === 1){
+            return 'losser';
+        }else{
+            return 'winner';
+        }
+    }
+}
